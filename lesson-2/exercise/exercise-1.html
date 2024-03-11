@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>Exercise 1</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <div class="header__title">
+            <a href="../../index.html" class="header__link">JavaScript</a>
+          </div>
+        </div>
+      </header>
+      <main class="page">
+        <div class="page__container">
+          <div class="page__exercise exercise">
+            <h2 class="exercise__title">Задача 1</h2>
+            <p class="exercise__text">
+              Знайти суму, добуток та частку двох дійсних чисел. Результат
+              вивести у формі таблиці.
+            </p>
+          
+            <script>
+                let a = parseInt(prompt('Введіть значення першого дійсного числа'));
+                let b = parseInt(prompt('Введіть значення другого дійсного числа'));
+
+                document.write(`
+                    <p class="exercise__text">Дано: а = ${a}; b = ${b}.</p>
+                    <table>
+                        <tr>
+                            <td>Обчислити</td>
+                            <td>Значення</td>
+                        </tr>
+                        <tr>
+                            <td>Сума дійсних чисел</td>
+                            <td>${a + b}</td>
+                        </tr>
+                        <tr>
+                            <td>Добуток дійсних чисел</td>
+                            <td>${a * b}</td>
+                        </tr>
+                        <tr>
+                            <td>Частка дійсних чисел</td>
+                            <td>${a / b}</td>
+                        </tr>
+                    </table>
+                    `);
+            </script>
+             <a href="../index.html" class="exercise__link">Повернутися</a>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__container">
+          <p class="text">Лінійні алгоритми &copy;</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

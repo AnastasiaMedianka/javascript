@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>Exercise 2</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <div class="header__title">
+            <a href="../../index.html" class="header__link">JavaScript</a>
+          </div>
+        </div>
+      </header>
+      <main class="page">
+        <div class="page__container">
+          <div class="page__exercise exercise">
+            <h2 class="exercise__title">Задача 2</h2>
+            <p class="exercise__text">
+              Дано рік народження (дата: 1 січня) та поточний рік. Знайти
+              кількість років.
+            </p>
+            <script>
+              let currentDate = new Date();
+              let currentYear = currentDate.getFullYear();
+              
+              let birthYear = parseInt(prompt('Введіть ваш рік народження'));
+              let yourAge = currentYear - birthYear;
+                
+              document.write(`<p>Станом на сьогоднішній день Вам ${yourAge}</p>`);
+            </script>
+            <a href="../index.html" class="exercise__link">Повернутися</a>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__container">
+          <p class="text">Лінійні алгоритми &copy;</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>Exercise 7</title>
+</head>
+<body>
+    <div class="wrapper">
+    <header class="header">
+        <div class="header__container">
+        <div class="header__title">
+            <a href="../../index.html" class="header__link">JavaScript</a>
+        </div>
+        </div>
+    </header>
+    <main class="page">
+        <div class="page__container">
+            <div class="page__exercise exercise">
+                <h2 class="exercise__title">Задача 7</h2>
+                <p class="exercise__text">
+                    Знайти суму випадкового номера місяця (від 1 до 12) та
+                    випадкового номера дня (від 0 до 6).
+                </p>
+                <script>
+                    let minMonthNumber = Math.ceil(1);
+                    let maxMonthNumber = Math.floor(12);
+                    
+                    let minDayNumber = Math.ceil(0);
+                    let maxDayNumber = Math.floor(6);
+
+                    let randomMonthNumber = Math.floor(Math.random() * (maxMonthNumber - minMonthNumber + 1) + minMonthNumber);
+                    let randomDayNumber = Math.floor(Math.random() * (maxDayNumber - minDayNumber + 1) + minDayNumber);
+
+                    let sum = randomMonthNumber + randomDayNumber;
+
+                    document.write(`<p>Випадковий номер місяця - ${randomMonthNumber}</p>
+                        <p>Випадковий номер дня - ${randomDayNumber}</p>
+			            <p>Сума: ${sum}</p>`);
+                </script>
+                <a href="../index.html" class="exercise__link">Повернутися</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__container">
+        <p class="text">Лінійні алгоритми &copy;</p>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>

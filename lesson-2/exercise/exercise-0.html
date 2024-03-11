@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>Exercise 0</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <div class="header__title">
+            <a href="../../index.html" class="header__link">JavaScript</a>
+          </div>
+        </div>
+      </header>
+      <main class="page">
+        <div class="page__container">
+          <div class="page__exercise exercise">
+            <h2 class="exercise__title">Задача 0</h2>
+            <p class="exercise__text">Обчислити значення виразів</p>
+            <ol class="exercise__list">
+              <li class="exercise__item">S&#8321; = a + 12 + b</li>
+              <li class="exercise__item">S&#8322; = &#8730;((a + b) / 2a)</li>
+              <li class="exercise__item">S&#8323; = &#8731;((a + b) * c)</li>
+              <li class="exercise__item">S&#8324; = sin (a / (-b))</li>
+            </ol>
+            <script>
+              let a = parseInt(prompt('Введіть значення а'));
+              let b = parseInt(prompt('Введіть значення b'));
+              let c = parseInt(prompt('Введіть значення c'));
+
+              // 1
+              let s1 = a + 12 + b;
+
+              // 2
+              let s2 = Math.sqrt(((a + b) / 2) * a);
+
+              // 3 
+              let s3 = Math.cbrt((a + b) / 2 * a);
+              
+              // 4
+              let s4 = Math.sin (a / (-b));
+             
+              document.write(`
+                <ol class="exercise__list">
+                  <li class="exercise__item">S&#8321; = a + 12 + b = ${a} + 12 + ${b} = ${s1}</li>
+                  <li class="exercise__item">S&#8322; = &#8730;((a + b) / 2a) = &#8730;((${a} + ${b}) / 2 * ${a}) = ${s2}</li>
+                  <li class="exercise__item">S&#8323; = &#8731;((a + b) * c) = &#8731;((${a} + ${b}) * ${c}) = ${s3}</li>
+                  <li class="exercise__item">S&#8324; = sin (a / (-b)) = sin (${a} / (-${b})) = ${s4}</li>
+                </ol>
+              `);
+            </script>
+             <a href="../index.html" class="exercise__link">Повернутися</a>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__container">
+          <p class="text">Лінійні алгоритми &copy;</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

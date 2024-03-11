@@ -1,0 +1,49 @@
+    <!DOCTYPE html>
+    <html lang="ua">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../../css/style.css" />
+        <title>Exercise 3</title>
+    </head>
+    <body>
+        <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+            <div class="header__title">
+                <a href="../../index.html" class="header__link">JavaScript</a>
+            </div>
+            </div>
+        </header>
+        <main class="page">
+            <div class="page__container">
+                <div class="page__exercise exercise">
+                    <h2 class="exercise__title">Задача 3</h2>
+                    <p class="exercise__text">
+                        Дано вартість одиниці товару і кількість. Знайти загальну
+                        вартість та ПДВ (5% від загальної вартості).
+                    </p>
+                    <script>
+                        let amountOfItems = parseInt(prompt('Введіть кількість товару, яку Ви хочете придбати'));
+                        let priceForPiece = parseInt(prompt('Введіть вартість товару'));
+                        const VAT = 0.05;
+
+                        let totalPrice = amountOfItems * priceForPiece;
+                        let vatValue = totalPrice * VAT;
+
+                        document.write(`
+                            <p>Якщо Ви бажаєте купити <span class="bold">${amountOfItems}</span> одиниць товару за ціною <span class="bold">${priceForPiece}</span> грн, то загальна вартість товару буде <span class="bold">${totalPrice}</span> грн (з урахуванням ПДВ – <span class="bold">${vatValue}</span> грн.)</p>
+                        `);
+                    </script>
+                    <a href="../index.html" class="exercise__link">Повернутися</a>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer__container">
+            <p class="text">Лінійні алгоритми &copy;</p>
+            </div>
+        </footer>
+        </div>
+    </body>
+    </html>

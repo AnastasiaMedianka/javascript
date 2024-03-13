@@ -48,13 +48,13 @@
 
               let someWish = prompt('Побажайте щось');
 
-              let firstItemTotakPrice = firstItemAmount * firstItemPrice;
-              let secondItemTotakPrice = secondItemAmount * secondItemPrice;
-              let thirdItemTotakPrice = thirdItemAmount * thirdItemPrice;
+              let firstItemTotalPrice = firstItemAmount * firstItemPrice;
+              let secondItemTotalPrice = secondItemAmount * secondItemPrice;
+              let thirdItemTotalPrice = thirdItemAmount * thirdItemPrice;
               let receiptPrice =
-                firstItemTotakPrice +
-                secondItemTotakPrice +
-                thirdItemTotakPrice;
+                firstItemTotalPrice +
+                secondItemTotalPrice +
+                thirdItemTotalPrice;
 
               document.write(`
                 <ul class="receipt">
@@ -67,7 +67,7 @@
                       <p class="receipt__description">${firstItemAmount} кг * ${firstItemPrice.toFixed(
                 2
               )} грн.</p>
-                      <p class="receipt__price">${firstItemTotakPrice.toFixed(
+                      <p class="receipt__price">${firstItemTotalPrice.toFixed(
                         2
                       )} грн.</p>
                     </div>
@@ -78,7 +78,7 @@
                       <p class="receipt__description">${secondItemAmount} шт. * ${secondItemPrice.toFixed(
                 2
               )} грн.</p>
-                      <p class="receipt__price">${secondItemTotakPrice.toFixed(
+                      <p class="receipt__price">${secondItemTotalPrice.toFixed(
                         2
                       )} грн.</p>
                     </div>
@@ -89,7 +89,7 @@
                       <p class="receipt__description">${thirdItemAmount} шт. * ${thirdItemPrice.toFixed(
                 2
               )} грн.</p>
-                      <p class="receipt__price">${thirdItemTotakPrice.toFixed(
+                      <p class="receipt__price">${thirdItemTotalPrice.toFixed(
                         2
                       )} грн.</p>
                     </div>

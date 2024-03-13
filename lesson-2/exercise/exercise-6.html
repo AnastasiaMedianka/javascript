@@ -1,93 +1,121 @@
 <!DOCTYPE html>
 <html lang="uk">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../css/style.css" />
     <title>Exercise 6</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="wrapper">
-    <header class="header">
+      <header class="header">
         <div class="header__container">
-        <div class="header__title">
+          <div class="header__title">
             <a href="../../index.html" class="header__link">JavaScript</a>
+          </div>
         </div>
-        </div>
-    </header>
-    <main class="page">
+      </header>
+      <main class="page">
         <div class="page__container">
-            <div class="page__exercise exercise">
-                <h2 class="exercise__title">Задача 6</h2>
-                <p class="exercise__text">
-                    З клавіатури вводяться вартість товару та кількість одиниць 3
-                    товарів. Обчислити вартість кожного товару окремо та загальну
-                    вартість. Вивести чек (як у супермаркеті) використовуючи
-                    елементи розмітки.
-                </p>
-                
-                <script>
-                    let firstItemAmount = parseInt(prompt('Введіть кількість мандарин (кг)'));
-                    let firstItemPrice = parseInt(prompt('Введіть вартість за кг'));
-                    let secondItemAmount = parseInt(prompt('Введіть кількість багетів (шт.)'));
-                    let secondItemPrice = parseInt(prompt('Введіть вартість за шт.'));
-                    let thirdItemAmount = parseInt(prompt('Введіть кількість ковбаси (шт.)'));
-                    let thirdItemPrice = parseInt(prompt('Введіть вартість за шт.'));
+          <div class="page__exercise exercise">
+            <h2 class="exercise__title">Задача 6</h2>
+            <p class="exercise__text">
+              З клавіатури вводяться вартість товару та кількість одиниць 3
+              товарів. Обчислити вартість кожного товару окремо та загальну
+              вартість. Вивести чек (як у супермаркеті) використовуючи елементи
+              розмітки.
+            </p>
 
-                    let someWish = prompt('Побажайте щось');
+            <script>
+              let firstItemAmount = parseFloat(
+                prompt('Введіть кількість мандарин (кг)', '2')
+              );
+              let firstItemPrice = parseFloat(
+                prompt('Введіть вартість за кг', '56.00')
+              );
+              let secondItemAmount = parseFloat(
+                prompt('Введіть кількість багетів (шт.)', '1')
+              );
+              let secondItemPrice = parseFloat(
+                prompt('Введіть вартість за шт.', '36.99')
+              );
+              let thirdItemAmount = parseFloat(
+                prompt('Введіть кількість ковбаси (шт.)', '1')
+              );
+              let thirdItemPrice = parseFloat(
+                prompt('Введіть вартість за шт.', '134.00')
+              );
 
-                    let firstItemTotakPrice = firstItemAmount * firstItemPrice;
-                    let secondItemTotakPrice = secondItemAmount * secondItemPrice;
-                    let thirdItemTotakPrice = thirdItemAmount * thirdItemPrice;
-                    let receiptPrice = firstItemTotakPrice + secondItemTotakPrice +thirdItemTotakPrice;
+              let someWish = prompt('Побажайте щось');
 
-                    document.write(`
-                        <ul class="receipt">
-                            <li class="receipt__item">
-                                <img src="../img/logo.svg" alt="silpo logo" class="receipt__logo">
-                            </li>
-                            <li class="receipt__item">
-                                <p class="receipt__title-name">Мандаринки</p>
-                                <div class="receipt__details">
-                                    <p class="receipt__description">${firstItemAmount} кг * ${firstItemPrice} грн.</p>
-                                    <p class="receipt__price">${firstItemTotakPrice} грн.</p>
-                                </div>
-                            </li>
-                            <li class="receipt__item">
-                                <p class="receipt__title-name">Багетик</p>
-                                <div class="receipt__details">
-                                    <p class="receipt__description">${secondItemAmount} шт. * ${secondItemPrice} грн.</p>
-                                    <p class="receipt__price">${secondItemTotakPrice} грн.</p>
-                                </div>
-                            </li>
-                            <li class="receipt__item">
-                                <p class="receipt__title-name">Ковбаска</p>
-                                <div class="receipt__details">
-                                    <p class="receipt__description">${thirdItemAmount} шт. * ${thirdItemPrice} грн.</p>
-                                    <p class="receipt__price">${thirdItemTotakPrice} грн.</p>
-                                </div>
-                            </li>
-                            <li class="receipt__item receipt__item--total">
-                                <p class="receipt__title-name">Сума</p>
-                                <p class="receipt__price">${receiptPrice} грн.</p>
-                                
-                            </li>
-                            <li class="receipt__item receipt__item--wish">
-                                <p class="wish">Передбачення для Вас:</p>
-                                <p class="wish uppercase">${someWish}</p>
-                            </li>
-                        </ul>    
-                    `);
-                </script>
-                <a href="../index.html" class="exercise__link">Повернутися</a>
-            </div>
+              let firstItemTotakPrice = firstItemAmount * firstItemPrice;
+              let secondItemTotakPrice = secondItemAmount * secondItemPrice;
+              let thirdItemTotakPrice = thirdItemAmount * thirdItemPrice;
+              let receiptPrice =
+                firstItemTotakPrice +
+                secondItemTotakPrice +
+                thirdItemTotakPrice;
+
+              document.write(`
+                <ul class="receipt">
+                  <li class="receipt__item">
+                    <img src="../img/logo.svg" alt="silpo logo" class="receipt__logo">
+                  </li>
+                  <li class="receipt__item">
+                    <p class="receipt__title-name">Мандаринки</p>
+                    <div class="receipt__details">
+                      <p class="receipt__description">${firstItemAmount} кг * ${firstItemPrice.toFixed(
+                2
+              )} грн.</p>
+                      <p class="receipt__price">${firstItemTotakPrice.toFixed(
+                        2
+                      )} грн.</p>
+                    </div>
+                  </li>
+                  <li class="receipt__item">
+                    <p class="receipt__title-name">Багетик</p>
+                    <div class="receipt__details">
+                      <p class="receipt__description">${secondItemAmount} шт. * ${secondItemPrice.toFixed(
+                2
+              )} грн.</p>
+                      <p class="receipt__price">${secondItemTotakPrice.toFixed(
+                        2
+                      )} грн.</p>
+                    </div>
+                  </li>
+                  <li class="receipt__item">
+                    <p class="receipt__title-name">Ковбаска</p>
+                    <div class="receipt__details">
+                      <p class="receipt__description">${thirdItemAmount} шт. * ${thirdItemPrice.toFixed(
+                2
+              )} грн.</p>
+                      <p class="receipt__price">${thirdItemTotakPrice.toFixed(
+                        2
+                      )} грн.</p>
+                    </div>
+                  </li>
+                  <li class="receipt__item receipt__item--total">
+                    <p class="receipt__title-name">Сума</p>
+                    <p class="receipt__price">${receiptPrice.toFixed(
+                      2
+                    )} грн.</p>
+                  </li>
+                  <li class="receipt__item receipt__item--wish">
+                    <p class="wish">Передбачення для Вас:</p>
+                    <p class="wish uppercase">${someWish}</p>
+                  </li>
+                </ul>    
+              `);
+            </script>
+            <a href="../index.html" class="exercise__link">Повернутися</a>
+          </div>
         </div>
-    </main>
-    <footer class="footer">
+      </main>
+      <footer class="footer">
         <div class="footer__container">
-        <p class="text">Лінійні алгоритми &copy;</p>
+          <p class="text">Лінійні алгоритми &copy;</p>
         </div>
-    </footer>
+      </footer>
     </div>
-</body>
+  </body>
 </html>

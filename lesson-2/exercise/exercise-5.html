@@ -1,49 +1,48 @@
 <!DOCTYPE html>
 <html lang="uk">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../css/style.css" />
     <title>Exercise 5</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="wrapper">
-    <header class="header">
+      <header class="header">
         <div class="header__container">
-        <div class="header__title">
+          <div class="header__title">
             <a href="../../index.html" class="header__link">JavaScript</a>
+          </div>
         </div>
-        </div>
-    </header>
-    <main class="page">
+      </header>
+      <main class="page">
         <div class="page__container">
-            <div class="page__exercise exercise">
-                <h2 class="exercise__title">Задача 5</h2>
-                <p class="exercise__text">
-                    Дано кількість секунд, що пройшла від початку доби. Визначити
-                    скільки це годин і хвилин.
-                </p>
-                <script>
-                    function convertSecondsToHoursMinutes(seconds) {
-                        let hours = Math.floor(seconds / 3600);
-                        let minutes = Math.floor((seconds % 3600) / 60);
-                        return hours + ' год ' + minutes + ' хв';
-                    }
-                    let totalSeconds = parseInt(prompt('Введіть кількість секунд'));
-                    let hoursMinutes = convertSecondsToHoursMinutes(totalSeconds);
+          <div class="page__exercise exercise">
+            <h2 class="exercise__title">Задача 5</h2>
+            <p class="exercise__text">
+              Дано кількість секунд, що пройшла від початку доби. Визначити
+              скільки це годин і хвилин.
+            </p>
+            <script>
+              function convertSecondsToHoursMinutes(seconds) {
+                let hours = Math.floor(seconds / 3600);
+                let minutes = Math.floor((seconds % 3600) / 60);
+                return hours + ' год ' + minutes + ' хв';
+              }
+              let totalSeconds = parseFloat(prompt('Введіть кількість секунд'));
+              let hoursMinutes = convertSecondsToHoursMinutes(totalSeconds);
 
-                    document.write(`<p>Загальний час складає ${hoursMinutes}</p>`);
-                    
-                </script>
-                <a href="../index.html" class="exercise__link">Повернутися</a>
-            </div>
+              document.write(`<p>Загальний час складає ${hoursMinutes}</p>`);
+            </script>
+            <a href="../index.html" class="exercise__link">Повернутися</a>
+          </div>
         </div>
-    </main>
-    <footer class="footer">
+      </main>
+      <footer class="footer">
         <div class="footer__container">
-        <p class="text">Лінійні алгоритми &copy;</p>
+          <p class="text">Лінійні алгоритми &copy;</p>
         </div>
-    </footer>
+      </footer>
     </div>
-</body>
+  </body>
 </html>

@@ -23,34 +23,38 @@
               Знайти суму, добуток та частку двох дійсних чисел. Результат
               вивести у формі таблиці.
             </p>
-          
-            <script>
-                let a = parseInt(prompt('Введіть значення першого дійсного числа'));
-                let b = parseInt(prompt('Введіть значення другого дійсного числа'));
 
-                document.write(`
-                    <p class="exercise__text">Дано: а = ${a}; b = ${b}.</p>
-                    <table>
-                        <tr>
-                            <td>Обчислити</td>
-                            <td>Значення</td>
-                        </tr>
-                        <tr>
-                            <td>Сума дійсних чисел</td>
-                            <td>${a + b}</td>
-                        </tr>
-                        <tr>
-                            <td>Добуток дійсних чисел</td>
-                            <td>${a * b}</td>
-                        </tr>
-                        <tr>
-                            <td>Частка дійсних чисел</td>
-                            <td>${a / b}</td>
-                        </tr>
-                    </table>
-                    `);
+            <script>
+              let a = parseFloat(
+                prompt('Введіть значення першого дійсного числа')
+              );
+              let b = parseFloat(
+                prompt('Введіть значення другого дійсного числа')
+              );
+
+              document.write(`
+                <p class="exercise__text">Дано: а = ${a}; b = ${b}.</p>
+                <table>
+                  <tr>
+                    <td>Обчислити</td>
+                    <td>Значення</td>
+                  </tr>
+                  <tr>
+                    <td>Сума дійсних чисел</td>
+                    <td>${a + b}</td>
+                  </tr>
+                  <tr>
+                    <td>Добуток дійсних чисел</td>
+                    <td>${a * b}</td>
+                  </tr>
+                  <tr>
+                    <td>Частка дійсних чисел</td>
+                    <td>${a / b}</td>
+                  </tr>
+                </table>
+              `);
             </script>
-             <a href="../index.html" class="exercise__link">Повернутися</a>
+            <a href="../index.html" class="exercise__link">Повернутися</a>
           </div>
         </div>
       </main>

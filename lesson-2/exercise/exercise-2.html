@@ -24,13 +24,15 @@
               кількість років.
             </p>
             <script>
-              let currentDate = new Date();
-              let currentYear = currentDate.getFullYear();
-              
-              let birthYear = parseInt(prompt('Введіть ваш рік народження'));
-              let yourAge = currentYear - birthYear;
-                
-              document.write(`<p>Станом на сьогоднішній день Вам ${yourAge}</p>`);
+              const currentDate = new Date();
+              const currentYear = currentDate.getFullYear();
+
+              const birthYear = parseInt(prompt('Введіть ваш рік народження'));
+              const yourAge = currentYear - birthYear;
+
+              document.write(
+                `<p>Станом на сьогоднішній день Вам ${yourAge}</p>`
+              );
             </script>
             <a href="../index.html" class="exercise__link">Повернутися</a>
           </div>

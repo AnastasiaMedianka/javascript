@@ -1,47 +1,51 @@
 <!DOCTYPE html>
 <html lang="uk">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../css/style.css" />
     <title>Exercise 4</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="wrapper">
-    <header class="header">
+      <header class="header">
         <div class="header__container">
-        <div class="header__title">
+          <div class="header__title">
             <a href="../../index.html" class="header__link">JavaScript</a>
+          </div>
         </div>
-        </div>
-    </header>
-    <main class="page">
+      </header>
+      <main class="page">
         <div class="page__container">
-            <div class="page__exercise exercise">
-                <h2 class="exercise__title">Задача 4</h2>
-                <p class="exercise__text">
-                    Дано довжину у сантиметрах. Визначати скільки це метрів і
-                    кілометрів.
-                </p>
-                <script>
-                    let lenthInCm = parseInt(prompt('Введіть довжину у сантиметрах'));
-                    const METER = 1/100; // 100sm
-                    const KM = 1/100000; // 100000sm
+          <div class="page__exercise exercise">
+            <h2 class="exercise__title">Задача 4</h2>
+            <p class="exercise__text">
+              Дано довжину у сантиметрах. Визначати скільки це метрів і
+              кілометрів.
+            </p>
+            <script>
+              let lenthInCm = parseFloat(
+                prompt('Введіть довжину у сантиметрах')
+              );
+              const METER = 1 / 100; // 100sm
+              const KM = 1 / 100000; // 100000sm
 
-                    let lenthInMeter = lenthInCm * METER;
-                    let lenthInKm = lenthInCm * KM;
+              let lenthInMeter = lenthInCm * METER;
+              let lenthInKm = lenthInCm * KM;
 
-                    document.write(`<p>Довжина заданого об'єкта складає <span class="bold">${lenthInCm}</span> см, що дорівнює <span class="bold">${lenthInMeter}</span> м, що еквівалентно <span class="bold">${lenthInKm}</span> км.</p>`);
-                </script>
-                <a href="../index.html" class="exercise__link">Повернутися</a>
-            </div>
+              document.write(
+                `<p>Довжина заданого об'єкта складає <span class="bold">${lenthInCm}</span> см, що дорівнює <span class="bold">${lenthInMeter}</span> м, що еквівалентно <span class="bold">${lenthInKm}</span> км.</p>`
+              );
+            </script>
+            <a href="../index.html" class="exercise__link">Повернутися</a>
+          </div>
         </div>
-    </main>
-    <footer class="footer">
+      </main>
+      <footer class="footer">
         <div class="footer__container">
-        <p class="text">Лінійні алгоритми &copy;</p>
+          <p class="text">Лінійні алгоритми &copy;</p>
         </div>
-    </footer>
+      </footer>
     </div>
-</body>
+  </body>
 </html>

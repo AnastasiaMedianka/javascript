@@ -27,22 +27,22 @@
               <li class="exercise__item">S&#8324; = sin (a / (-b))</li>
             </ol>
             <script>
-              let a = parseInt(prompt('Введіть значення а'));
-              let b = parseInt(prompt('Введіть значення b'));
-              let c = parseInt(prompt('Введіть значення c'));
+              let a = parseFloat(prompt('Введіть значення а', '8'));
+              let b = parseFloat(prompt('Введіть значення b', '8'));
+              let c = parseFloat(prompt('Введіть значення c', '4'));
 
               // 1
               let s1 = a + 12 + b;
 
               // 2
-              let s2 = Math.sqrt(((a + b) / 2) * a);
+              let s2 = Math.sqrt((a + b) / (2 * a));
 
-              // 3 
-              let s3 = Math.cbrt((a + b) / 2 * a);
-              
+              // 3
+              let s3 = Math.cbrt((a + b) * c);
+
               // 4
-              let s4 = Math.sin (a / (-b));
-             
+              let s4 = Math.sin(a / -b);
+
               document.write(`
                 <ol class="exercise__list">
                   <li class="exercise__item">S&#8321; = a + 12 + b = ${a} + 12 + ${b} = ${s1}</li>
@@ -52,7 +52,7 @@
                 </ol>
               `);
             </script>
-             <a href="../index.html" class="exercise__link">Повернутися</a>
+            <a href="../index.html" class="exercise__link">Повернутися</a>
           </div>
         </div>
       </main>

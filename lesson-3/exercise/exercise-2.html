@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>Exercise 2</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <div class="header__title">
+            <a href="../../index.html" class="header__link">JavaScript</a>
+          </div>
+        </div>
+      </header>
+      <main class="page">
+        <div class="page__container">
+          <div class="page__exercise exercise">
+            <h2 class="exercise__title">Задача 2</h2>
+            <p class="exercise__text">
+              З клавіатури вводиться ціна товару і кількість грошей. Якщо грошей
+              не вистачає то відмовляємо у покупці, інакше, якщо ще залишаються
+              гроші, то пропонуємо купити лотерею за 4 грн.
+            </p>
+            <script>
+              let firstItemPrice = parseFloat(
+                prompt('Введіть вартість кавових зерен 250г')
+              );
+              let secondItemPrice = parseFloat(
+                prompt('Введіть вартість бананового молока "Alpro" 1л')
+              );
+              let amountOfMoney = parseFloat(
+                prompt('Введіть кількість грошей, що у Вас із собою')
+              );
+
+              let totalPrice = firstItemPrice + secondItemPrice;
+
+              if (amountOfMoney > totalPrice)
+                alert('Чи бажаєте купити лотерейний білетик за 4 грн.?') +
+                  alert('Вам пакет потрібен?') +
+                  alert('Бажаємо гарного дня :)');
+              else
+                alert(
+                  'Вибачте, але суми на вашому рахунку недостатньо для здійснення покупок. Гарного дня. До побачення.'
+                );
+            </script>
+            <a href="../index.html" class="exercise__link">Повернутися</a>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__container">
+          <p class="text">Лінійні алгоритми &copy;</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

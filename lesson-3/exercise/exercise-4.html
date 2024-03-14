@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>Exercise 4</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <div class="header__title">
+            <a href="../../index.html" class="header__link">JavaScript</a>
+          </div>
+        </div>
+      </header>
+      <main class="page">
+        <div class="page__container">
+          <div class="page__exercise exercise">
+            <h2 class="exercise__title">Задача 4</h2>
+            <p class="exercise__text">
+              З клавіатури вводиться вік людини. Вивести на екран ким він є
+              (дитиною у садочку, школярем, студентом, працівником,
+              пенсіонером).
+            </p>
+            <script>
+              let userAge = parseInt(prompt('Введіть Ваш вік'));
+
+              if (userAge < 7)
+                document.write(
+                  'Зважаючи на Ваш вік, Ви, найімовірніше, є дитиною в садочку.'
+                );
+              else if (userAge < 17)
+                document.write(
+                  'Зважаючи на Ваш вік, Ви, найімовірніше, є школярем.'
+                );
+              else if (userAge < 23)
+                document.write(
+                  'Зважаючи на Ваш вік, Ви, найімовірніше, є студентом.'
+                );
+              else if (userAge < 60)
+                document.write(
+                  'Зважаючи на Ваш вік, Ви, найімовірніше, є працівником.'
+                );
+              else if (userAge < 90)
+                document.write(
+                  'Зважаючи на Ваш вік, Ви, найімовірніше, є пенсіонером.'
+                );
+              else if (userAge < 120)
+                document.write(
+                  'Зважаючи на Ваш вік, Ви, найімовірніше, є суперлюдиною.'
+                );
+              else
+                document.write(
+                  'Зважаючи на Ваш вік, Ви, найімовірніше, є мумією.'
+                );
+
+              // Також можно:
+              // switch (true) {
+              //   case 7 > userAge:
+              //     document.write(
+              //       'Зважаючи на Ваш вік, Ви, найімовірніше, є дитиною в садочку.'
+              //     );
+              //     break;
+              //   case 17 > userAge:
+              //     document.write(
+              //       'Зважаючи на Ваш вік, Ви, найімовірніше, є школярем.'
+              //     );
+              //     break;
+              //   case 23 > userAge:
+              //     document.write(
+              //       'Зважаючи на Ваш вік, Ви, найімовірніше, є студентом.'
+              //     );
+              //     break;
+              //   case 23 > userAge:
+              //     document.write(
+              //       'Зважаючи на Ваш вік, Ви, найімовірніше, є студентом.'
+              //     );
+              //     break;
+              //   case 60 > userAge:
+              //     document.write(
+              //       'Зважаючи на Ваш вік, Ви, найімовірніше, є працівником.'
+              //     );
+              //     break;
+              //   case 90 > userAge:
+              //     document.write(
+              //       'Зважаючи на Ваш вік, Ви, найімовірніше, є пенсіонером.'
+              //     );
+              //     break;
+              //   case 120 > userAge:
+              //     document.write(
+              //       'Зважаючи на Ваш вік, Ви, найімовірніше, є суперлюдиною.'
+              //     );
+              //     break;
+
+              //   default:
+              //     document.write(
+              //       'Зважаючи на Ваш вік, Ви, найімовірніше, є мумією.'
+              //     );
+              //     break;
+              // }
+            </script>
+            <a href="../index.html" class="exercise__link">Повернутися</a>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__container">
+          <p class="text">Лінійні алгоритми &copy;</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

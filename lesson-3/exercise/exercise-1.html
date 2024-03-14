@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>Exercise 1</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <div class="header__title">
+            <a href="../../index.html" class="header__link">JavaScript</a>
+          </div>
+        </div>
+      </header>
+      <main class="page">
+        <div class="page__container">
+          <div class="page__exercise exercise">
+            <h2 class="exercise__title">Задача 1</h2>
+            <p class="exercise__text">
+              З клавіатури вводяться імена двох дітей та кількість у них
+              цукерок. Вивести не екран ім’я тієї дитини, у якої кількість
+              цукерок є більшою, або вивести, що кількість однакова.
+            </p>
+
+            <script>
+              let firstChildName = prompt("Введіть ім'я першої дитини");
+              let firstChildAmountOfSweets = parseFloat(
+                prompt('Введіть кількість цукерок першої дитини')
+              );
+
+              let secondChildName = prompt("Введіть ім'я другої дитини");
+              let secondChildAmountOfSweets = parseFloat(
+                prompt('Введіть кількість цукерок другої дитини')
+              );
+
+              if (firstChildAmountOfSweets > secondChildAmountOfSweets)
+                alert(firstChildName);
+              else if (firstChildAmountOfSweets < secondChildAmountOfSweets)
+                alert(secondChildName);
+              else if ((firstChildAmountOfSweets = secondChildAmountOfSweets))
+                alert('Кількість цукерок однакова');
+            </script>
+            <a href="../index.html" class="exercise__link">Повернутися</a>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__container">
+          <p class="text">Лінійні алгоритми &copy;</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

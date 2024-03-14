@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>Exercise 5</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <div class="header__title">
+            <a href="../../index.html" class="header__link">JavaScript</a>
+          </div>
+        </div>
+      </header>
+      <main class="page">
+        <div class="page__container">
+          <div class="page__exercise exercise">
+            <h2 class="exercise__title">Задача 5</h2>
+            <p class="exercise__text">
+              З клавіатури вводиться назва категорії водія (А-мотоцикл,
+              В-легковий автомобіль, С-вантажний автомобіль). Вивести на екран
+              назву транспортного засобу, яким він може керувати.
+            </p>
+            <script>
+              let drivingCategories = prompt(
+                'Введіть Вашу категорію водіння',
+                'В'
+              ).toUpperCase();
+
+              if (drivingCategories == 'А')
+                document.write('Ваша категорія водіння - А-мотоцикл');
+              else if (drivingCategories == 'В')
+                document.write(
+                  'Ваша категорія водіння - В-легковий автомобіль'
+                );
+              else if (drivingCategories == 'С')
+                document.write(
+                  'Ваша категорія водіння - С-вантажний автомобіль'
+                );
+              else document.write('Не вірна категорія. Спробуйте ще раз.');
+            </script>
+            <a href="../index.html" class="exercise__link">Повернутися</a>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__container">
+          <p class="text">Лінійні алгоритми &copy;</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

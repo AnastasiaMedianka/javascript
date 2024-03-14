@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>Exercise 3</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <div class="header__title">
+            <a href="../../index.html" class="header__link">JavaScript</a>
+          </div>
+        </div>
+      </header>
+      <main class="page">
+        <div class="page__container">
+          <div class="page__exercise exercise">
+            <h2 class="exercise__title">Задача 3</h2>
+            <p class="exercise__text">
+              Випадковим чином генерується число від 1 до 5. Спробуйте вгадати
+              число за 2 спроби.
+            </p>
+            <script>
+              let firstTry = parseInt(
+                prompt(
+                  'Випадковим чином генерується число від 1 до 5. Спробуйте вгадати число.'
+                )
+              );
+              let secondTry = parseInt(prompt('Спробуйте ще раз.'));
+
+              let min = 1,
+                max = 5;
+              let randomNumber =
+                min + Math.floor(Math.random() * (max - min + 1));
+
+              if (firstTry === randomNumber)
+                document.write(
+                  `Вітаю! Ви вгадали. Число дорівнює ${randomNumber}`
+                );
+              else if (secondTry === randomNumber)
+                document.write(
+                  `Вітаю! Ви вгадали. Число дорівнює ${randomNumber}`
+                );
+              else
+                document.write(
+                  'На жаль жодна зі спроб не виявилася правильною.'
+                );
+            </script>
+            <a href="../index.html" class="exercise__link">Повернутися</a>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__container">
+          <p class="text">Лінійні алгоритми &copy;</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
